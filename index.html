@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    body{margin:0;font:16px/1.5 Arial, sans-serif;max-width:900px;padding:24px}
+    nav a{margin-right:12px}
+    section{margin:28px 0}
+    .card{border:1px solid #ddd;border-radius:10px;padding:14px;margin:10px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Role / Focus (e.g., Systems Engineering, Web Dev)</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr />
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Project One</h3>
+      <p>One sentence on what it does.</p>
+      <a href="#">Demo</a> · <a href="#">Code</a>
+    </div>
+    <div class="card">
+      <h3>Project Two</h3>
+      <p>One sentence on what it does.</p>
+      <a href="#">Demo</a> · <a href="#">Code</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>2–3 lines about your background, interests, and what you are seeking.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>Links: <a href="https://github.com/">GitHub</a> · <a href="https://www.linkedin.com/">LinkedIn</a></p>
+  </section>
+
+  <footer><hr /><small>© <span id="y"></span> Your Name</small></footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
