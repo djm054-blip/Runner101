@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+  <style>
+    .box{fill:#fff;stroke:#2b2b2b;stroke-width:1.6;rx:8}
+    .label{font:14px/1.2 Arial, sans-serif; fill:#111}
+    .small{font:12px/1.2 Arial, sans-serif; fill:#444}
+    .arrow{stroke:#555;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
+    .note{font:12px/1.2 Arial, sans-serif;fill:#006;}
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555" />
+    </marker>
+  </defs>
+
+  <!-- Developer -->
+  <rect x="20" y="30" width="160" height="70" rx="8" class="box"/>
+  <text x="100" y="55" text-anchor="middle" class="label">Developer</text>
+  <text x="100" y="74" text-anchor="middle" class="small">(local machine)</text>
+
+  <!-- GitHub Repo -->
+  <rect x="220" y="20" width="180" height="110" rx="8" class="box"/>
+  <text x="310" y="50" text-anchor="middle" class="label">GitHub Repository</text>
+  <text x="310" y="70" text-anchor="middle" class="small">(git objects, branches)</text>
+
+  <!-- Actions / Build -->
+  <rect x="440" y="20" width="170" height="110" rx="8" class="box"/>
+  <text x="525" y="50" text-anchor="middle" class="label">CI / Pages Build</text>
+  <text x="525" y="70" text-anchor="middle" class="small">(GitHub Actions / Jekyll / Static site)</text>
+
+  <!-- CDN / Pages Host -->
+  <rect x="640" y="20" width="210" height="110" rx="8" class="box"/>
+  <text x="745" y="50" text-anchor="middle" class="label">GitHub Pages / CDN</text>
+  <text x="745" y="70" text-anchor="middle" class="small">(static assets served globally)</text>
+
+  <!-- Browser -->
+  <rect x="420" y="220" width="200" height="80" rx="8" class="box"/>
+  <text x="520" y="250" text-anchor="middle" class="label">User Browser</text>
+  <text x="520" y="270" text-anchor="middle" class="small">(resolves DNS, HTTPS/TLS)</text>
+
+  <!-- DNS -->
+  <rect x="20" y="150" width="170" height="70" rx="8" class="box"/>
+  <text x="105" y="180" text-anchor="middle" class="label">DNS</text>
+  <text x="105" y="198" text-anchor="middle" class="small">(resolves domain to Pages/IP)</text>
+
+  <!-- Arrows and protocol labels -->
+  <path d="M180 65 L220 65" class="arrow" />
+  <text x="200" y="58" text-anchor="middle" class="small">git (SSH/HTTPS)</text>
+
+  <path d="M400 65 L440 65" class="arrow" />
+  <text x="420" y="58" text-anchor="middle" class="small">webhook / push event</text>
+
+  <path d="M610 65 L640 65" class="arrow" />
+  <text x="625" y="58" text-anchor="middle" class="small">build artifacts</text>
+
+  <path d="M745 130 L520 220" class="arrow" />
+  <text x="670" y="160" text-anchor="middle" class="small">static content (HTML/CSS/JS)</text>
+
+  <path d="M200 160 L105 160" class="arrow" />
+  <text x="150" y="152" text-anchor="middle" class="small">A-record / CNAME</text>
+
+  <path d="M120 150 L520 220" class="arrow" />
+  <text x="320" y="195" text-anchor="middle" class="small">DNS lookup</text>
+
+  <path d="M745 130 L620 220" class="arrow" />
+  <text x="685" y="180" text-anchor="middle" class="small">HTTPS / TLS</text>
+
+  <!-- Extra annotations -->
+  <text x="100" y="290" class="note">Overview: Developer pushes code via Git → GitHub repo triggers build → GitHub Pages hosts static site → Browser loads site over HTTPS (DNS resolves domain)</text>
+
+  <!-- Footer small legend -->
+  <text x="20" y="400" class="small">Protocols: Git (SSH/HTTPS), DNS, HTTPS/TLS, HTTP (redirected to HTTPS), CDN delivery</text>
+</svg>
